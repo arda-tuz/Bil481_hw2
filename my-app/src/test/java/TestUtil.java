@@ -13,4 +13,14 @@ public class TestUtil {
 
   @Test
   public void example() { assertTrue(true); }
+
+  @Test
+  public void oneElementTest() {
+    assertFalse(c.compute(1));
+  }
+
+  @Test
+  public void EvenNumberElementsTest() {
+    assertFalse(c.compute(1, 2));
+  }
 }
