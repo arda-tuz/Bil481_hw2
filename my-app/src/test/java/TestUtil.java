@@ -23,4 +23,9 @@ public class TestUtil {
   public void EvenNumberElementsTest() {
     assertFalse(c.compute(1, 2));
   }
+
+  @Test(expected = RuntimeException.class)
+  public void exceptionTest() {
+    c.compute(1, 2, 0);
+  }
 }
