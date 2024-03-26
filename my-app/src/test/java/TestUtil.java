@@ -28,4 +28,15 @@ public class TestUtil {
   public void exceptionTest() {
     c.compute(1, 2, 0);
   }
+
+  @Test
+  public void SumDivisibleByElementTest() {
+    assertTrue(c.compute(2, 4, 6, 8, 10));
+  }
+
+  @Test
+  public void SumNotDivisibleByElementTest() {
+    assertFalse(c.compute(2, 2, 2, 2, 3));
+  }
+
 }
