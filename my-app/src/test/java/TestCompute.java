@@ -33,4 +33,17 @@ public class TestCompute {
 
     assertEquals(0, c.countNumberOfOccurrences("Bil_481"));
   }
+
+  @Test
+  public void testCountNumberOfOccurrencesWithElementInQueue() {
+    MessageQueue mq = mock(MessageQueue.class);
+    when(mq.size()).thenReturn(3);
+    when(mq.contains("eleman1")).thenReturn(true);
+    when(mq.getAt(0)).thenReturn("eleman1");
+    when(mq.getAt(1)).thenReturn("eleman2");
+    when(mq.getAt(2)).thenReturn("eleman1");
+    c = new Compute(mq);
+
+    assertEquals(2, c.countNumberOfOccurrences("eleman1"));
+  }
 }
